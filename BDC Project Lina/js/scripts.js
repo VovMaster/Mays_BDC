@@ -124,6 +124,21 @@ $(document).ready(function() {
 	dropdownHover();
 
 
+	$('.nav-related-links > ul > li > a').click(function(){
+		 if($(this).next().length) {
+		 	if($(this).hasClass('active')){
+		 		$('.nav-related-links > ul > li > a + ul').parent().removeClass('active');
+		 	}else {
+		 		$('.nav-related-links > ul > li > a + ul').parent().removeClass('active');
+		 		$(this).parent().addClass('active');
+		 	}
+		 	return false
+		 }else {
+
+		 }
+	});
+
+
 
 });
 
