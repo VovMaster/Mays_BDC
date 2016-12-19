@@ -139,14 +139,6 @@ $(document).ready(function() {
 	});
 
 
-	$('.wrap-block-style-info .wrap-circle').each(function(){
-		var prevPosition = $(this).prev('.wrap-block-style-info').position();
-		var nextPosition = $(this).prev('.wrap-block-style-info').position();
-
-		
-		console.log(prevPosition);
-	});
-
 
 
 });
@@ -154,10 +146,40 @@ $(document).ready(function() {
 $(window).load(function(){
 
 	grid();
+	if ($('.wrap-block-style .wrap-circle').length) {
+		circle();
+	}
+
+});
+
+$(window).resize(function(){
+
+	if ($('.wrap-block-style .wrap-circle').length) {
+		circle();
+	}
 
 });
 
 
+
+function circle() {
+
+	$('.wrap-block-style .wrap-circle').each(function(){
+		var prevCircle = $(this).prev('.wrap-block-style-info');
+		var nextCircle = $(this).next('.wrap-block-style-info');
+		if (nextCircle.length && prevCircle.length ) {
+			var prevCirclePosition = prevCircle.position().top;
+			var nextCirclePosition = nextCircle.position().top;
+			console.log(prevCirclePosition);
+			var prevCircleHeight = prevCircle.outerHeight() / 2;
+			var nextCircleHeight = nextCircle.outerHeight() / 2;
+
+
+			var topCircle = 10 + ( ( nextCircleHeight + nextCirclePosition + prevCircleHeight + prevCirclePosition) / 2 );
+			$(this).css('top', topCircle);
+		}
+	});
+}
 
 function grid(){
 	$('.grid').isotope({
