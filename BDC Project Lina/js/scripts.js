@@ -139,6 +139,15 @@ $(document).ready(function() {
 	});
 
 
+	$('.wrap-block-style-info .wrap-circle').each(function(){
+		var prevPosition = $(this).prev('.wrap-block-style-info').position();
+		var nextPosition = $(this).prev('.wrap-block-style-info').position();
+
+		
+		console.log(prevPosition);
+	});
+
+
 
 });
 
