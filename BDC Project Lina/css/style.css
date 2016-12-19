@@ -4480,7 +4480,6 @@ h3 {
   position: relative;
   max-width: 860px;
   margin: auto;
-  background-color: #dda;
   min-height: 1120px;
 }
 .vertical-line {
@@ -4583,6 +4582,21 @@ h3 {
   position: absolute;
   right: -97px;
   top: 50%;
+}
+.image-container {
+  border: 1px solid #dfd9d9;
+}
+.wrap-circle {
+  width: 120px;
+  height: 120px;
+  border: 1px solid rgba(247, 171, 20, 0.3);
+  background-color: #ffffff;
+  border-radius: 100%;
+}
+.wrap-circle:after {
+  border-radius: 100%;
+  border: 1px solid rgba(247, 171, 20, 0.3);
+  background-color: #ffffff;
 }
 /*------------END BLOCK STYLE------------*/
 @media (max-width: 1340px) {
