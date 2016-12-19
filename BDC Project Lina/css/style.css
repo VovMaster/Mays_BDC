@@ -4489,7 +4489,6 @@ h3 {
 .vertical-line {
   width: 4px;
   background-color: #f08b1d;
-  /*min-height: 780px;*/
   position: absolute;
   top: 20px;
   left: 50%;
@@ -4611,7 +4610,7 @@ h3 {
   border: 1px solid rgba(247, 171, 20, 0.3);
   border-radius: 100%;
   position: absolute;
-  top: 0;
+  /*top: 0;*/
   left: 50%;
   margin-left: -60px;
 }
