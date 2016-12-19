@@ -713,6 +713,7 @@ h3{
 }
 /*------------BLOCK STYLE-----------------*/
 .wrap-block-style{
+	padding-top: 55px;
 	.title-large{
 		padding-bottom: 7px;
 	}
@@ -1041,7 +1042,35 @@ h3{
 	.grid-item {
 		padding: 4px;
 	}
-
+	.wrap-block-style-info{
+		width: auto;
+		&.left, &.right{
+			float: none;
+			margin: 20px 0;
+		}
+		&:after{
+			display: none;
+		}
+	}
+	.block-style-info{
+		width: auto;
+		margin: 20px 0;
+		float: none;
+		padding: 10px 20px 20px;
+		&:before{
+			display: none;
+		}
+	}
+	.wrap-circle{
+		position: relative;
+		top: 0 !important;
+	}
+	.block-style-content{
+		padding-top: 0;
+	}
+	.wrap-block-style{
+		padding-top: 20px;
+	}
 }
 @media (max-width: 600px){
 	.list-showing {
