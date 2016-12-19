@@ -1,0 +1,230 @@
+.main-nav{
+	> ul {
+		> li{
+			> a{
+				color: #4c4c4c;
+				font-size: 15px;
+				font-weight: 600;
+				line-height: 24px;
+				padding: 33px 22px;
+				.transition(0.3s);
+				position: relative;
+				&:after {
+					content: " ";
+					display: block;
+					height: 30px;
+					left: 8px;
+					right: 8px;
+					top: 50%;
+					margin-top: -15px;
+					/*border: 2px solid #ddd;*/
+					border: 2px solid #a6cc29;
+					position: absolute;
+					margin: -25px -10px 0 10px; 
+					opacity: 0;
+				}
+				&:focus {
+					background-color: transparent;
+				}
+				&:hover{
+					background-color: transparent;
+					color: #000;
+					&:after {
+						opacity: 1;
+						margin: -15px 0 0 0;
+					}
+				}
+			}
+			&.current a{
+				color: #a6cc29;
+				&:after {
+					opacity: 0;
+					margin: -15px 0 0 0;
+				}
+			}
+		}
+	}
+}
+.navbar-brand{
+	height: auto;
+	padding: 15px 0;
+}
+.main-nav{
+	float: left;
+	> .nav{
+		margin-right: 0;
+	}
+}
+.navbar-header:after{
+	clear: none;
+}
+.social-icons{
+	float: right;
+	margin: 29px 0 29px 0;
+	li{
+		float: left;
+	}
+	a{
+		width: 32px;
+		height: 32px;
+		background-color: #dda;
+		margin: 0 0 0 10px;
+		display: block;
+		border-radius: 1px;
+		padding: 6px;
+	}
+	.icon{
+		margin: auto;
+		display: block;
+		width: 16px;
+		height: 20px;
+	}
+
+	.facebook{
+		background-color: #3b5998;
+		&:hover {
+			background-color: #3b5998 - 20%;
+		}
+	}
+	.twitter{
+		background-color: #55acee;
+		&:hover {
+			background-color: #55acee - 20%;
+		}
+	}
+	.youtube{
+		background-color: #cd201f;
+		&:hover {
+			background-color: #cd201f - 20%;
+		}
+	}
+}
+.icon-facebook{
+	background-position: -808px -5px;
+}
+.icon-youtube{
+	background-position: -808px -47px;
+}
+.icon-twitter{
+	background-position: -808px -25px;
+}
+.navbar-toggle{
+	background-color: #005387;
+	margin: 28px 0;
+}
+.icon-bar{
+	background-color: #fff;
+}
+
+/* MEGA MENU STYLE
+********************************/ 
+.mega-menu {
+	padding: 10px 0px ! important;
+	width: 540px;
+	border-radius: 0;
+	margin-top: 0px;
+	img {
+		display: block;
+		height: auto;
+		max-width: 100%;
+	}
+}
+
+.mega-menu li {
+	display: inline-block;
+	float: left;
+	font-size: 0.94rem;
+	padding: 3px 0px;
+}
+
+.mega-menu li.mega-menu-column {
+	margin-right: 20px;
+	width: 150px;
+	> ul {
+		padding-left: 25px;
+	}
+}
+
+
+.mega-menu .nav-header {
+	padding: 0 !important;
+	margin-bottom: 10px;
+	display: inline-block;
+	width: 100%;
+	border-bottom: 1px solid #ddd;
+}
+.mega-menu img { padding-bottom: 10px;}
+
+
+
+
+@media (max-width: 950px){
+	.main-nav{
+		> ul {
+			> li {
+				> a {
+					padding: 33px 10px;
+				}
+			}
+		}
+	}
+	.main-nav > ul > li >  a::after {
+		left: 0px;
+		right: 0px;
+	}
+}
+@media (min-width: 768px){
+	.main-nav{
+		> ul {
+			> li {
+				> a {
+					&:after {
+						.transition(0.2s);
+					}
+				}
+			}
+		}
+	}
+}
+@media (max-width: 767px){
+	.main-nav{
+		border-top: 1px solid #ddd;
+		padding: 0;
+		width: 100%;
+		> .nav{
+			margin: 0;
+			> li > a{
+				text-align: center;
+				padding: 12px;
+				text-transform: uppercase;
+			}
+		}
+	}
+	.social-icons{
+		margin-right: 10px;
+		a{
+			margin: 0 2px;
+		}
+	}
+	.main-nav > ul > li > a::after {
+		margin: -15px 0 0 0;
+	}
+
+	/* MEGA MENU STYLE 
+	********************************/ 
+
+	.mega-menu {
+		position: static;
+	}
+	.mega-menu li.mega-menu-column {
+		float: none;
+		display: block;
+		margin: 0;
+		overflow: hidden;
+		width: 100%;
+	}
+	.mega-menu li.mega-menu-column > ul {
+		padding-left: 0;
+	}
+
+}
