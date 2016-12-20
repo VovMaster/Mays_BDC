@@ -4478,6 +4478,7 @@ h3 {
 /*------------BLOCK STYLE-----------------*/
 .wrap-block-style {
   padding-top: 55px;
+  overflow: hidden;
 }
 .wrap-block-style .title-large {
   padding-bottom: 7px;
