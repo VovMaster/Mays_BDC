@@ -5623,7 +5623,7 @@ h3 {
   color: #fff;
   line-height: normal;
   min-height: 62px;
-  margin: 0 -20px 14px;
+  margin: 0 -21px 14px;
   padding: 12px 20px;
 }
 .img-marker {
@@ -5652,7 +5652,6 @@ h3 {
   margin-top: -8px;
   background: #fff;
   margin-left: -2px;
-  opacity: 0;
 }
 .wrap-plus:after {
   content: " ";
@@ -5664,11 +5663,9 @@ h3 {
   left: 50%;
   margin-left: -8px;
   margin-top: -2px;
-  opacity: 0;
 }
-.calendar-one-block:hover .wrap-plus:before,
-.calendar-one-block:hover .wrap-plus:after {
-  opacity: 1;
+.wrap-plus:hover {
+  background: #4e4e4e;
 }
 .calendar-wrap {
   max-width: 960px;
